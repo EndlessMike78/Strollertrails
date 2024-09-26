@@ -1,0 +1,97 @@
+h1 {
+  color: white;
+  text-shadow: 0 0 5px black, 0 0 9px hsl(140, 21%, 54%);
+  font-size: 65px;
+}
+h2 {
+  color: white;
+  text-shadow: 0 0 3px black, 0 0 5px hsl(140, 21%, 54%);
+  font-size: 34px;
+}
+h3 {
+  font-size: 30px;
+}
+        body {
+          margin: 0;
+        }
+        
+        .header {
+          font-family: Garamond, serif;
+          background-image: url("https://media.gettyimages.com/id/1339751014/photo/rain-in-the-forest-vancouver-canada.jpg?s=612x612&w=0&k=20&c=9OWQKb3u7p2DpSDrxDTS7uBqawrjtuKycrcthLVNpZA=");
+          padding: 20px;
+          text-align: center;
+        }
+        ul {
+          font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          list-style-type: none;
+          text-align: center;
+          margin: 0;
+          padding: 0;
+        }
+  .topnav {
+    overflow: hidden;
+    background-color: #4eac65;
+  }
+  .topnav a {
+    float: left;
+    display: block;
+    color: #fff9f9;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .topnav a:hover {
+    background-color: #0a6320;
+    color: rgb(0, 0, 0);
+  }
+  .topnav a:active {
+    background-color:rgb(20, 192, 92);
+    box-shadow: 0 5px #056337;
+    transform: translateY(4px);
+  }
+  .container {
+    padding: 45px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: justify;}
+  
+  /* Future 2 bottom columns */
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+  
+  .blue-column {
+    background-color: rgb(113, 90, 165);
+    height: 500px;
+    text-align: center;
+  }
+  
+  .green-column {
+    background-color: rgb(105, 146, 105);
+    height: 500px;
+    text-align: center;
+  }
+  
+  /*responsive layout*/
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  .footer {
+    background-color: #b7b7c2;
+    padding: 10px;
+    text-align: center;
+  }
