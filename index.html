@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" type="text/css" href="file:///D:\codeFolder\Website1\otherwebsitestuff\webpage.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Website Stroller Friendly</title>
+   <script src="file:///D:\codeFolder\Website1\otherwebsitestuff\websitev1.js"></script>
 </head>
 <body>
-    <h1>auto pull works woot wooooooooooooooooot</h1>
-    <p>now the real fun begins...</p>
+  <div class="header">
+    <h1>Stroller Friendly Trails</h1>
+    <div>
+      <br>
+    <h2>This website is a list and collection of trails</h2>
+    <h2>that are usable for running with a stroller.</h2>
+    <h2>in the Pacific Northwest</h2>
+    <br></br>
+    <br></br>
+    <br></br>
+    </div>
+  </div>
+    <div class="topnav">
+      <a href="file:///D:/codeFolder/Website1/otherwebsitestuff/websiteV1.1.html">Home</a>
+      <a href="file:///D:/codeFolder/Website1/otherwebsitestuff/websitepage2.0.html">Seattle</a>
+      <a href="https://www.alltrails.com/us/oregon/portland/strollers">Portland</a>
+      <a href="https://www.alltrails.com/us/washington/bellingham/strollers">Bellingham</a>
+      <a href="https://www.facebook.com/profile.php?id=61564879913653">Contact</a>
+    </div>
+    <div class="container">
+    <h3>
+      For the majority of my life I have been an avid trail runner throughout the Pacific Northwest. After the birth of my first child I was worried that I would be stuck running on pavement for many years to come if I was pushing a stroller.
+      When I moved to the Seattle area I started exploring and found a few trails that were wide enough, but not so rough that I could still "trail run" while pushing a stroller.  It wasn't that single track through the mountains that I love,
+      but it was enough terrain that I could wear trail shoes and enjoy the feel of earth, or gravel under my feet again. I started searching the internet for lists or websites that had this list, but it wasn't out there.Thus started my quest 
+      to find those Goldilock trails that were wide enough for my stroller, and also smooth enough to be able to push my child without any discomfort. Facebook and other trail running website forums have been invaluable in making this page 
+      possible.  Also just grunt work. There were a lot of possible trails and suggestions that ended up not making this list, from being to rocky, or random flights of stairs making the stroller run impossible. I am hoping this will be an 
+      ever expanding list from the NW and beyond.
+      </h3>
+    </div>
+    <div class='some-page-wrapper'>
+        <div class='row'>
+          <div class='column'>
+            <div class='blue-column'>
+              <h2>Gear Recommendations</h2>
+              <img src="https://images.unsplash.com/photo-1600563093202-337471bde37e?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  alt="Stroller Photo" width="350" height="350">
+            </div>
+          </div>
+          <div class='column'>
+            <div class='green-column'>
+              <h2>Seattle Area Map</h2>
+              <img src="https://cdn-assets.alltrails.com/static-map/production/lists/13932834/lists-13932834-20201115195437000000000-625x365-1.png"
+              alt="Seattle Area Map" width="350" height="350">
+            </div>
+          </div>
+        </div>
+      </div>     
+    </div>
+    <div class="footer">
+      <p>Know Another Trail? Comment Here.</p>
+      <div id="comment-container">
+    </div>
+    <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+    <br>
+    <button id="btn-post">Post</button> 
+    <script>
+      document.getElementById("btn-post").addEventListener("click", function () {
+    const newComment = document.getElementById("new-comment").value;
+    const commentContainer = document.getElementById("comment-container");
+    const commentElement = document.createElement("p");
+    commentElement.innerText = newComment;
+    commentContainer.appendChild(commentElement);
+    document.getElementById("new-comment").value = "";
+});
+    </script>
 </body>
 </html>
