@@ -65,41 +65,15 @@
     <br>
     <button id="btn-post">Post</button> 
     <script>
-    function saveComment() {
-  const commentBox = document.getElementById("comment-box");
-  const comments = localStorage.getItem("comments") || [];
-
-  // Parse the comments string into an array
-  const parsedComments = JSON.parse(comments);
-
-  // Add the new comment to the array
-  parsedComments.push(commentBox.value);
-
-  // Convert the array back to a string and save it to localStorage
-  localStorage.setItem("comments", JSON.stringify(parsedComments));
-
-  // Clear the comment box
-  commentBox.value = "";
-
-  // Display the saved comments (optional)
-  displayComments();
-}
-
-function displayComments() {
-  const comments = localStorage.getItem("comments") || [];
-  const parsedComments = JSON.parse(comments);
-
-  const commentsContainer = document.getElementById("comments-container");
-  commentsContainer.innerHTML = "";
-
-  parsedComments.forEach((comment) => {
+     document.getElementById("btn-post").addEventListener("click", function () {
+    const newComment = document.getElementById("new-comment").value;
+    const commentContainer = document.getElementById("comment-container");
     const commentElement = document.createElement("p");
-    commentElement.textContent = comment;
-    commentsContainer.appendChild(commentElement);   
+    commentElement.innerText = newComment;
+    commentContainer.appendChild(commentElement);
+    document.getElementById("new-comment").value = "";
+});
 
-  });
-}
-displayComments();
     </script>
 </body>
 </html>
