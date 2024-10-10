@@ -64,37 +64,16 @@
     <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
     <br>
     <button id="btn-post">Post</button> 
-  <script>document.getElementById("btn-post").addEventListener("click", function () {
+    <script>
+     document.getElementById("btn-post").addEventListener("click", function () {
     const newComment = document.getElementById("new-comment").value;
-  
-    // Save the comment to localStorage
-    const comments = localStorage.getItem("comments") || [];
-    const parsedComments = JSON.parse(comments);
-    parsedComments.push(newComment);
-    localStorage.setItem("comments", JSON.stringify(parsedComments));
-  
-    // Display the comment on the page
     const commentContainer = document.getElementById("comment-container");
     const commentElement = document.createElement("p");
-    commentElement.innerText   
-   = newComment;
+    commentElement.innerText = newComment;
     commentContainer.appendChild(commentElement);
-  
-    // Clear the comment box
     document.getElementById("new-comment").value = "";
-  });
-  
-  // Display previously saved comments on page load
-  const comments = localStorage.getItem("comments") || [];
-  const parsedComments = JSON.parse(comments);
-  
-  const commentContainer = document.getElementById("comment-container");
-  parsedComments.forEach((comment) => {
-    const commentElement = document.createElement("p");
-    commentElement.innerText = comment;
-    commentContainer.appendChild(commentElement);   
-  
-  });
-  </script>
+});
+
+    </script>
 </body>
 </html>
