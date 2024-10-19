@@ -94,12 +94,12 @@ h3 {
 }
 ul {
   list-style-type: none;
+  text-align: center;
 }
 .footer2 {
   display: flex;
   flex-wrap: wrap;
   font-size: 30px;
-  text-align: center;
 }
 .footer3 {
   text-align: center;
