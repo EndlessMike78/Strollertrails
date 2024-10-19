@@ -97,5 +97,7 @@ h3 {
   flex-wrap: wrap;
   font-size: 30px;
   align-items: center;
-
+}
+.footer3 {
+  text-align: center;
 }
