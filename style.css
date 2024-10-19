@@ -90,4 +90,8 @@ h3 {
   background-color: #66669b;
   padding: 10px;
   text-align: center;
+  
+}
+.footer1 {
+  flex-direction: row;
 }
