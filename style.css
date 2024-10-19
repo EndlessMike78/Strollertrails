@@ -94,6 +94,8 @@ h3 {
 }
 .footer2 {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
 
 }
