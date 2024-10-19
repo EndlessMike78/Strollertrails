@@ -93,6 +93,7 @@ h3 {
   
 }
 .footer2 {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   font-size: 30px;
