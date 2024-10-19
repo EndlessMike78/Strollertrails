@@ -92,8 +92,10 @@ h3 {
   text-align: center;
   
 }
+ul {
+  list-style-type: none;
+}
 .footer2 {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   font-size: 30px;
