@@ -94,4 +94,5 @@ h3 {
 }
 .footer1 {
   flex-direction: row;
+  text-align: center;
 }
