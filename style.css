@@ -97,7 +97,8 @@ ul {
   text-align: center;
 }
 .footer2 {
-
+  display: flex;
+  flex-wrap: wrap;
   font-size: 25px;
   text-align: center;
 }
