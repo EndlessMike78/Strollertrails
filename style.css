@@ -96,13 +96,6 @@ ul {
   list-style-type: none;
   text-align: center;
 }
-.footer2 {
-  display: grid;
-  height: 400px;
-  align-content: space-evenly;
-  grid-template-columns: auto auto auto;
-  gap: 10px;
-}
 .footer3 {
   display: flex;
   flex-wrap: wrap;
