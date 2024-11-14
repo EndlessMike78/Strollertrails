@@ -91,7 +91,7 @@ h3 {
     }
   }
   .footer {
-    background-color: #66669b;
+    background-color: #b40a0a;
     padding: 10px;
     text-align: center;
     
@@ -100,9 +100,4 @@ h3 {
     list-style-type: none;
     text-align: center;
   }
-  .footer3 {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    background-color: #0a6320;
-  }
+ 
