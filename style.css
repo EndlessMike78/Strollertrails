@@ -96,9 +96,3 @@ ul {
   list-style-type: none;
   text-align: center;
 }
-.footer3 {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  background-color: #0a6320;
-}
