@@ -1,1 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gear Guide | PNW Stroller Trails</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
+    <style>
+        :root {
+            --primary-green: #2d6a4f;
+            --accent-green: #52b788;
+            --soft-green: #d8f3dc;
+            --light-bg: #fdfdfd;
+            --text-dark: #1b4332;
+            --text-muted: #555;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary-green);
+            font-size: 1.4rem;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                        url("https://images.unsplash.com/photo-1600563093202-337471bde37e?q=80&w=2012&auto=format&fit=crop");
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Gear Grid */
+        .gear-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .gear-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+        }
+
+        .gear-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-green);
+        }
+
+        .gear-number {
+            display: inline-block;
+            background: var(--soft-green);
+            color: var(--primary-green);
+            font-weight: 700;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .gear-item h2 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-green);
+        }
+
+        .gear-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .footer {
+            background-color: #f1f3f2;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 6rem;
+        }
+
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">PNW Stroller Trails</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="seattleindex.html">Seattle</a>
+        <a href="#">Portland</a>
+        <a href="#">Bellingham</a>
+        <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <header class="header">
+    <h1>Trail-Tested Gear</h1>
+    <p>Everything you need for off-road parenting in the Pacific Northwest.</p>
+  </header>
+
+  <main>
+    <section class="intro-text">
+        <h2 style="font-family: 'Playfair Display'; font-size: 2rem; margin-bottom: 1rem;">The Essential Checklist</h2>
+        <p>Transitioning from sidewalks to forest loam requires the right kit. We've compiled 20 must-have items for safety, comfort, and performance.</p>
+    </section>
+
+    <ul class="gear-list">
+        <li class="gear-item">
+            <span class="gear-number">1</span>
+            <h2>All-Terrain Jogger</h2>
+            <p>Look for air-filled tires (16"+ rear) and a lockable front swivel wheel for stability on gravel.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">2</span>
+            <h2>Safety Wrist Tether</h2>
+            <p>Non-negotiable for PNW hills. Keeps the stroller attached to you on steep descents.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">3</span>
+            <h2>Deceleration Hand Brake</h2>
+            <p>Crucial for controlling momentum while running downhill with a 30lb+ stroller.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">4</span>
+            <h2>Rain Shield</h2>
+            <p>A custom-fit weather cover to keep the wind and drizzle off your passenger.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">5</span>
+            <h2>Portable Tire Pump</h2>
+            <p>Miniature bike pumps are lifesavers when you hit a sharp root and lose pressure.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">6</span>
+            <h2>Tire Sealant/Liners</h2>
+            <p>Pre-treat your tubes with sealant to automatically plug small punctures from thorns.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">7</span>
+            <h2>Handlebar Console</h2>
+            <p>Organize your phone, water, and keys for easy access without stopping your stride.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">8</span>
+            <h2>Stroller Fan/Heater</h2>
+            <p>Battery-operated climate control to keep the little one comfy regardless of the grade.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">9</span>
+            <h2>Reflective Tape</h2>
+            <p>Add high-vis strips to the stroller frame for those misty morning or twilight runs.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">10</span>
+            <h2>Insulated Bunting</h2>
+            <p>A "sleeping bag" for the stroller seat to keep legs warm in freezing mountain air.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">11</span>
+            <h2>Trail Running Shoes</h2>
+            <p>Deep lugs (5mm+) for you to maintain traction while pushing uphill on mud.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">12</span>
+            <h2>Hydration Vest</h2>
+            <p>Better than bottles in the console for you; keeps weight balanced on your torso.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">13</span>
+            <h2>Compact First Aid Kit</h2>
+            <p>Specific for both adult trail scrapes and toddler needs (antiseptic, fun bandaids).</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">14</span>
+            <h2>Diaper Change Mat</h2>
+            <p>A foldable, waterproof mat for trailside changes on damp forest floors.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">15</span>
+            <h2>Collapsible Snack Cup</h2>
+            <p>Keep the passenger fed with spill-proof containers that fit in the stroller tray.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">16</span>
+            <h2>Sun Shade Extension</h2>
+            <p>Standard canopies often fall short; add a mesh extension for low-angle sun protection.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">17</span>
+            <h2>Headlamp (Stroller Mount)</h2>
+            <p>Clip a high-lumen light to the front axle to illuminate roots and rocks at night.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">18</span>
+            <h2>Dry Bags</h2>
+            <p>Stuff spare clothes and diapers in 5L dry bags inside the cargo basket to ensure they stay dry.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">19</span>
+            <h2>Bells/Noise Maker</h2>
+            <p>Bear bells or a small horn to alert other hikers when you’re approaching on narrow trails.</p>
+        </li>
+        <li class="gear-item">
+            <span class="gear-number">20</span>
+            <h2>Stroller Lock</h2>
+            <p>A lightweight cable lock for when you want to park the stroller and hike a short "foot-only" spur.</p>
+        </li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 MDY | PNW Stroller Trails</p>
+    <p style="font-size: 0.8rem; margin-top: 1rem; opacity: 0.6;">Tested on the muddiest trails of the Cascades.</p>
+  </footer>
+
+</body>
+</html>
