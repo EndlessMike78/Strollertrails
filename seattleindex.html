@@ -1,102 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="seattle.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seattle Area Trails</title>
-    
+    <title>Seattle Area Trails | Stroller Friendly PNW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-green: #2d6a4f;
+            --accent-green: #52b788;
+            --soft-green: #d8f3dc;
+            --light-bg: #fdfdfd;
+            --text-dark: #1b4332;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+        }
+
+        /* Navigation */
+        .navbar {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary-green);
+            font-size: 1.4rem;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent-green); }
+
+        /* Header */
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), 
+                        url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2041&auto=format&fit=crop");
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Main Content Layout */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* 2 parts list, 1 part sidebar cards */
+            gap: 40px;
+        }
+
+        .trail-section h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .trail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 12px;
+            list-style: none;
+        }
+
+        .trail-grid li a {
+            display: block;
+            padding: 12px 18px;
+            background: white;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            border: 1px solid #eee;
+            transition: 0.3s;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .trail-grid li a:hover {
+            background: var(--soft-green);
+            border-color: var(--accent-green);
+            transform: translateY(-2px);
+        }
+
+        /* Sidebar Cards */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            padding: 15px;
+            font-size: 1.1rem;
+            color: var(--primary-green);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f1f3f2;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .comment-box {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            font-family: inherit;
+        }
+
+        button {
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            main { grid-template-columns: 1fr; }
+            .sidebar { order: -1; } /* Put cards on top for mobile */
+        }
+    </style>
 </head>
 <body>
-  <div class="header">
-    <h1>Seattle and Beyond Trails</h1>
-    <div>
-    <h2>All of these trails are within an hour or so </h2>
-    <h2>of the Seattle Metro Area</h2>
-    <h2>They are a minimum of at least 3 miles</h2>
-    <h2>and are almost all completely unpaved</h2>
-    <br></br>
-    <br></br>
-    <br></br>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">PNW Stroller Trails</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="seattleindex.html" style="color: var(--accent-green);">Seattle</a>
+        <a href="https://www.alltrails.com/us/oregon/portland/strollers" target="_blank">Portland</a>
+        <a href="https://www.alltrails.com/us/washington/bellingham/strollers" target="_blank">Bellingham</a>
+        <a href="https://www.facebook.com/profile.php?id=61564879913653" target="_blank">Contact</a>
     </div>
-    </div>
-    <div class="topnav">
-      <a href="index.html">Home</a>
-      <a href="seattleindex.html">Seattle</a>
-      <a href="https://www.alltrails.com/us/oregon/portland/strollers">Portland</a>
-      <a href="https://www.alltrails.com/us/washington/bellingham/strollers">Bellingham</a>
-      <a href="https://www.facebook.com/profile.php?id=61564879913653">Contact</a>
-    </div>
-    <div class="container">
-    <ul><h3>
-      <li><a href= "https://www.alltrails.com/explore/trail/us/washington/west-tiger-3?mobileMap=false&ref=sidebar-static-map">West Tiger 3</a></li>
-      <li><a href= "https://www.hikingproject.com/trail/7025104/issaquah-preston-trail">Issaquah to Preston</a></li>
-      <li><a href= "https://www.alltrails.com/trail/us/washington/raven-and-coyote-trail-loop">Bridle Trails</a></li>
-      <li><a href= "https://www.alltrails.com/trail/us/washington/trillium-trail-and-siler-mill-trail">Redmond Watershed/Powerlne Trails</a></li>
-      <li><a href="https://www.alltrails.com/trail/us/washington/lake-youngs">Young's Lake</a></li>
-      <li><a href= "https://www.alltrails.com/trail/us/washington/tolt-pipeline-trail--3">Tolt Pipeline Trail</a></li>
-      <li><a href= "https://www.alltrails.com/trail/us/washington/loop-trail-via-west-emerson-street-entrance">Discovery Park Loop</a></li>
-      <li><a href= "https://www.alltrails.com/explore/recording/afternoon-mountain-bike-ride-f4e369c--21">Puget Powerline Trail</a></li>
-      <li><a href="https://www.hikingproject.com/trail/7032907/main-trail">360 Park Main Loop Trail</a></li>
-      <li><a href= "https://www.hikingproject.com/trail/7021265/snoqualmie-valley-trail-north">Snolqualmie Valley Trail North</a></li>
-      <li><a href= "https://www.alltrails.com/trail/us/washington/waterline-trail-from-lake-boren-park">Waterline Trail</a></li>
-      <li><a href= "https://www.hikingproject.com/trail/7019057/heritage-loop">Mercer Slough/Bellevue Bluberry Loop</a></li>
-      <li><a href= "https://www.alltrails.com/trail/us/washington/evans-creek-preserve-trail">Evans Creek Preserve</a></li>
-      <li><a href= "https://www.alltrails.com/explore/trail/us/washington/preston-snoqualmie-trail?mobileMap=false&ref=sidebar-static-map">Preston to Fall City</a></li>
-      <li><a href="https://www.hikingproject.com/trail/7034522/palouse-to-cascades-state-park-trail-hyak-to-cedar-falls">Palouse to Cascade Trail</a></li>
-      <li><a href= "https://www.alltrails.com/explore/trail/us/washington/grand-ridge-park-trail?mobileMap=false&ref=sidebar-static-map">Grand Ridge Park</a></li>
-      <li><a href= "https://www.hikingproject.com/trail/7075707/warren-magnuson-loop">Magnuson Park Mix</a></li>
-      <li><a href= "https://www.alltrails.com/explore/trail/us/washington/tolt-pipeline-trail--3?mobileMap=false&ref=sidebar-static-map">East Trail to Tolt Trail</a></li>
-      <li><a href="https://www.alltrails.com/explore/trail/us/washington/cross-kirkland-corridor?mobileMap=false&ref=sidebar-static-map">Kirkland Corridor Trail</a></li>
-      <li><a href= "https://www.hikingproject.com/trail/7053400/tuscany-loop">Tuscany Equestrian Trail</a></li>
-      <li><a href= "https://www.hikingproject.com/trail/7089027/pioneer-park">Pioneer Park</a></li>
-         </h3>
-    </ul>
-    </div>
-    <div class='some-page-wrapper'>
-        <div class='row'>
-          <div class='column'>
-            <div class='blue-column'>
-              <h2>Gear Recommendations</h2>
-              <img src="https://media.gettyimages.com/id/477852581/vector/couple-jogging-exercising-with-baby-stroller-at-twilight-background.jpg?s=612x612&w=0&k=20&c=taacREDFhujkHiFrbx7ZnHRxugPRnz5ZzAA-yeAx7Ho="
-  alt="Stroller Photo" width="350" height="350">
-            </div>
-          </div>
-          <div class='column'>
-            <div class='green-column'>
-              <h2>Seattle Area Map</h2>
-              <img src="https://media.gettyimages.com/id/157742710/photo/us-cities-on-map-series-seattle-washington.jpg?s=612x612&w=0&k=20&c=HdoMJmQNHWu-7aNhWitlU86hOMVh2tjNEDlbXC3xLlg="
-              alt="Seattle Area Map" width="350" height="350">
-            </div>
-          </div>
+  </nav>
+
+  <header class="header">
+    <h1>Seattle & Beyond</h1>
+    <p>3+ Miles | Primarily Unpaved | Stroller Tested</p>
+  </header>
+
+  <main>
+    <!-- Left Side: Trail List -->
+    <section class="trail-section">
+      <h2>Explore the Trails</h2>
+      <ul class="trail-grid">
+        <li><a href="https://www.alltrails.com/explore/trail/us/washington/west-tiger-3">West Tiger 3</a></li>
+        <li><a href="https://www.hikingproject.com/trail/7025104/issaquah-preston-trail">Issaquah to Preston</a></li>
+        <li><a href="https://www.alltrails.com/trail/us/washington/raven-and-coyote-trail-loop">Bridle Trails</a></li>
+        <li><a href="https://www.alltrails.com/trail/us/washington/trillium-trail-and-siler-mill-trail">Redmond Watershed</a></li>
+        <li><a href="https://www.alltrails.com/trail/us/washington/lake-youngs">Young's Lake</a></li>
+        <li><a href="https://www.alltrails.com/trail/us/washington/tolt-pipeline-trail--3">Tolt Pipeline Trail</a></li>
+        <li><a href="https://www.alltrails.com/trail/us/washington/loop-trail-via-west-emerson-street-entrance">Discovery Park Loop</a></li>
+        <li><a href="https://www.alltrails.com/explore/recording/afternoon-mountain-bike-ride-f4e369c--21">Puget Powerline Trail</a></li>
+        <li><a href="https://www.hikingproject.com/trail/7032907/main-trail">360 Park Main Loop</a></li>
+        <li><a href="https://www.hikingproject.com/trail/7021265/snoqualmie-valley-trail-north">Snoqualmie Valley North</a></li>
+        <li><a href="https://www.alltrails.com/trail/us/washington/waterline-trail-from-lake-boren-park">Waterline Trail</a></li>
+        <li><a href="https://www.hikingproject.com/trail/7019057/heritage-loop">Mercer Slough Loop</a></li>
+        <li><a href="https://www.alltrails.com/trail/us/washington/evans-creek-preserve-trail">Evans Creek Preserve</a></li>
+        <li><a href="https://www.alltrails.com/explore/trail/us/washington/preston-snoqualmie-trail">Preston to Fall City</a></li>
+        <li><a href="https://www.hikingproject.com/trail/7034522/palouse-to-cascades-state-park-trail-hyak-to-cedar-falls">Palouse to Cascade</a></li>
+        <li><a href="https://www.alltrails.com/explore/trail/us/washington/grand-ridge-park-trail">Grand Ridge Park</a></li>
+        <li><a href="https://www.hikingproject.com/trail/7075707/warren-magnuson-loop">Magnuson Park Mix</a></li>
+        <li><a href="https://www.alltrails.com/explore/trail/us/washington/cross-kirkland-corridor">Kirkland Corridor</a></li>
+        <li><a href="https://www.hikingproject.com/trail/7053400/tuscany-loop">Tuscany Equestrian Trail</a></li>
+        <li><a href="https://www.hikingproject.com/trail/7089027/pioneer-park">Pioneer Park</a></li>
+      </ul>
+    </section>
+
+    <!-- Right Side: Cards -->
+    <aside class="sidebar">
+        <div class="card">
+            <img src="https://media.gettyimages.com/id/477852581/vector/couple-jogging-exercising-with-baby-stroller-at-twilight-background.jpg?s=612x612&w=0&k=20&c=taacREDFhujkHiFrbx7ZnHRxugPRnz5ZzAA-yeAx7Ho=" alt="Gear">
+            <h3>Gear Recommendations</h3>
         </div>
-      </div>     
-    </div>
-    <!--footer stuff-->
-    <div class="footer">
-      <footer>
-        <p>Know Another Trail? Comment Here.</p>
-        <div id="comment-container">
-      </div>
-      <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
-      <br>
-      <button id="btn-post">Post</button>
-      <p>Copyright</p>
-      <p>MDY</p>
-      <p>2024</p> 
-        <div class="footer0">
-          <h1></h1>
+        <div class="card">
+            <img src="https://media.gettyimages.com/id/157742710/photo/us-cities-on-map-series-seattle-washington.jpg?s=612x612&w=0&k=20&c=HdoMJmQNHWu-7aNhWitlU86hOMVh2tjNEDlbXC3xLlg=" alt="Map">
+            <h3>Seattle Area Map</h3>
         </div>
-      <!--footer stuff above-->
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <h3>Have a Trail Suggestion?</h3>
+    <div class="comment-box">
+        <div id="comment-container"></div>
+        <textarea id="new-comment" placeholder="Name of trail..."></textarea>
+        <button id="btn-post">Submit</button>
+    </div>
+    <p class="copyright">© 2024 MDY | Stroller Trails PNW</p>
+  </footer>
+
   <script>
     document.getElementById("btn-post").addEventListener("click", function () {
-    const newComment = document.getElementById("new-comment").value;
-    const commentContainer = document.getElementById("comment-container");
-    const commentElement = document.createElement("p");
-    commentElement.innerText = newComment;
-    commentContainer.appendChild(commentElement);
-    document.getElementById("new-comment").value = "";
-     });
-  </script>  
+        const text = document.getElementById("new-comment").value.trim();
+        if (text) {
+            const p = document.createElement("p");
+            p.style.background = "#fff";
+            p.style.padding = "10px";
+            p.style.borderRadius = "8px";
+            p.style.marginBottom = "10px";
+            p.innerText = text;
+            document.getElementById("comment-container").appendChild(p);
+            document.getElementById("new-comment").value = "";
+        }
+    });
+  </script>
+
 </body>
-</html> 
+</html>
