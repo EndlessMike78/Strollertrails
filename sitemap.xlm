@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <!-- Primary URL / Homepage -->
+   <!-- Landing Page -->
    <url>
-      <https://strollertrails.com/>INSERT_URL_1_HERE</loc>
+      <loc>https://strollertrails.com/</loc>
       <lastmod>2026-05-14</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
    <!-- Second URL -->
    <url>
-      <https://strollertrails.com/seattleindex.html>INSERT_URL_2_HERE</loc>
+      <loc>https://strollertrails.com/seattleindex.html</loc>
       <lastmod>2026-05-14</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <!-- Third URL -->
    <url>
-      <https://strollertrails.com/gear.html>INSERT_URL_3_HERE</loc>
+      <loc>https://strollertrails.com/gear.html</loc>
       <lastmod>2026-05-14</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
+   <!-- Fourth URL -->
 </urlset>
